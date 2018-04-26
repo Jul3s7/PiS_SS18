@@ -5,18 +5,14 @@ public interface RPNCalculator {
     //TODO Fakultät
     //TODO Löschen der Eingabe, löschen des obersten Wertes, alles löschen
 
-    public int add();
-
-    public int sub();
-
+    public void add();
+    public void sub();
     public int mul();
-
     public int mod();
-
     public int div();
+    public int neg(int x);
 
     public int getResult();
-
     public void setResult(int result);
 
 
