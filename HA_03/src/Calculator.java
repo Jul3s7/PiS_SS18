@@ -20,34 +20,52 @@ public class Calculator implements RPNCalculator {
     }
 
     @Override
-    public int mul() {
+    public void mul() {
         int x = stack.pop();
         int y = stack.pop();
-        return x * y;
+        result = x * y;
     }
 
     @Override
-    public int mod() {
+    public void mod() {
         int x = stack.pop();
         int y = stack.pop();
-        return 0;
+        //modulo berechnen
     }
 
     @Override
-    public int div() {
+    public void div() {
         int x = stack.pop();
         int y = stack.pop();
-        if (x == 0 || y == 0){
-            return 0;
-        } else {
-            return x / y;
+        if (x != 0 || y != 0){
+            result = x/y;
         }
     }
 
     @Override
-    public int neg(int x) {
+    public void neg(int x) {
         x = stack.pop();
-        return x * -1;
+        result = x * -1;
+    }
+
+    @Override
+    public void fakul(int i) {
+
+    }
+
+    @Override
+    public void deleteLastDigit() {
+
+    }
+
+    @Override
+    public void deleteDigit() {
+
+    }
+
+    @Override
+    public void deleteStack() {
+
     }
 
     @Override
@@ -69,7 +87,7 @@ public class Calculator implements RPNCalculator {
         Calculator calc = new Calculator();
         calc.push(3);
         calc.push(5);
-        calc.add();
+        calc.sub();
         System.out.println(calc.getResult());
 
     }
